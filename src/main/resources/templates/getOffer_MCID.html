@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <link rel="icon" href="https://www.miaprova.com/target-java-sdk/favicon.ico?v=2" />
+<title>Target Client:GetOffer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="VisitorAPI.js"></script>
+<script>
+    
+  </script>
+
+</head>
+<body>
+	
+	<pre id="response"></pre>
+
+
+	<script th:inline="javascript">
+		/*<![CDATA[*/
+
+		var message = /*[[${content}]]*/'default';
+		var organizationId = /*[[${organizationId}]]*/'default';
+		var visitorState = /*[[${visitorState}]]*/'default';
+
+		Visitor.getInstance(organizationId, {
+			serverState : visitorState
+		});
+		
+		document.getElementById("response").innerHTML = JSON.stringify(message,
+				undefined, 2);
+		
+		/*]]>*/
+	</script>
+</body>
+</html>

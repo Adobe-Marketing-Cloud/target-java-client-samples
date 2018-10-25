@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="icon" href="https://www.miaprova.com/target-java-sdk/favicon.ico?v=2" />
+<title>Target Client:GetOffer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="VisitorAPI.js"></script>
+
+
+
+<script>
+    window.targetGlobalSettings = {
+      overrideMboxEdgeServer: true
+    };
+  </script>
+
+</head>
+<body>
+	
+	<pre id="response"></pre>
+
+	<script th:inline="javascript">
+				/*<![CDATA[*/
+
+				var message = /*[[${content}]]*/'default';
+				var organizationId = /*[[${organizationId}]]*/'default';
+				var visitorState = /*[[${visitorState}]]*/'default';
+
+				var visitor = Visitor.getInstance(organizationId, {
+					serverState : visitorState
+				});
+				visitor.trackingServer = "ravenprodsin.sc.omtrdc.net";
+
+				document.getElementById("response").innerHTML = JSON.stringify(message,
+						undefined, 2);
+
+				/*]]>*/
+			</script>
+
+	<script src="at.js"></script>
+
+
+	<script src="AppMeasurement.js"></script>
+	<script>var s_code=s.t();if(s_code)document.write(s_code);</script>
+	
+</body>
+</html>

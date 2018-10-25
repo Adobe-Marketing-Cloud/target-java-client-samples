@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="icon" href="https://www.miaprova.com/target-java-sdk/favicon.ico?v=2" />
+<title>Target Client:GetOffer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="VisitorAPI.js"></script>
+
+
+</head>
+<body>
+	
+	<pre id="response"></pre>
+
+
+	<script th:inline="javascript">
+		/*<![CDATA[*/
+
+		var message = /*[[${content}]]*/'default';
+		var organizationId = /*[[${organizationId}]]*/'default';
+		var visitorState = /*[[${visitorState}]]*/'default';
+
+		Visitor.getInstance(organizationId, {
+			serverState : visitorState
+		});
+		
+		document.getElementById("response").innerHTML = JSON.stringify(message,
+				undefined, 2);
+
+		/*]]>*/
+	</script>
+
+</body>
+</html>

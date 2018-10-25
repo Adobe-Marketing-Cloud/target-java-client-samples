@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.0.5.RELEASE'
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.adobe.target'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+
+dependencies {
+	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'com.google.code.gson:gson'
+	compile 'com.adobe.target:target-java-client:1.0.0-SNAPSHOT'
+	testCompile'org.springframework.boot:spring-boot-starter-test'
+}

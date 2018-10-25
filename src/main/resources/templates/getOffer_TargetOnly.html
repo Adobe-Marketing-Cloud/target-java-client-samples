@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="icon" href="https://www.miaprova.com/target-java-sdk/favicon.ico?v=2" />
+<title>Target Client:GetOffer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<pre id="response"></pre>
+	<script th:inline="javascript">
+		/*<![CDATA[*/
+
+		var message = /*[[${content}]]*/'default';		
+		message = JSON.parse(message);
+		document.getElementById("response").innerHTML = JSON.stringify(message,
+				undefined, 2);
+
+		/*]]>*/
+	</script>
+
+</body>
+</html>
