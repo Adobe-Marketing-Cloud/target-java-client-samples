@@ -20,6 +20,7 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'com.google.code.gson:gson'
-	compile 'com.adobe.target:target-java-client:1.0.0-SNAPSHOT'
+//	compile 'com.adobe.target:target-java-client:1.0.0-SNAPSHOT'
+	compile 'com.adobe.target:target-java-client:1.0.0'
 	testCompile'org.springframework.boot:spring-boot-starter-test'
 }
